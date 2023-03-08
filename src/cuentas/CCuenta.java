@@ -1,4 +1,9 @@
 package cuentas;
+/**
+ * Clase de ejemplo para uso de cuentas bancaria
+ * @author bey
+ *
+ */
 public class CCuenta {
 
 
@@ -11,11 +16,19 @@ public class CCuenta {
     {
     }
 
+    /**
+     * Constructor de la clase Ccuenta.
+     * @param nom nombre del propietario de la cuenta
+     * @param cue número de cuenta
+     * @param sal saldo inicial
+     * @param tipo tipo de cuenta
+     */
     public CCuenta(String nom, String cue, double sal, double tipo)
     {
         setNombre(nom);
         setCuenta(cue);
         setSaldo(sal);
+        //setTipoInterés(tipo);
     }
 
     public double estado()
@@ -23,6 +36,11 @@ public class CCuenta {
         return getSaldo();
     }
 
+    /**
+     * Ingresa la cantidad indicada en la cuenta.
+     * @param cantidad La cantidad a ingresar no puede ser una cantidad negativa.
+     * @throws Exception Lanza esta excepción cuando la cantidad indicada es menor que cero.
+     */
     public void ingresar(double cantidad) throws Exception
     {
         if (cantidad<0)
